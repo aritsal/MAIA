@@ -1,0 +1,16 @@
+{
+    "name": "Arts.UI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0776627842aa2d899de34a086dc0d63"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
