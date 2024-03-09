@@ -395,29 +395,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &987463494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2504085922684214035, guid: df75d0d9a61401287a54ef034eafee1b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3546240122456037763}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &987463500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987463494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70aa99f9763941ccfb8f1136a4363b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <HoverableLayers>k__BackingField:
-    serializedVersion: 2
-    m_Bits: 8
-  <MaxHoverableDistance>k__BackingField: 5
-  <HoveringObject>k__BackingField: {fileID: 0}
 --- !u!1 &1572485572
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +589,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3971466816204263543, guid: df75d0d9a61401287a54ef034eafee1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.28
+      objectReference: {fileID: 0}
     - target: {fileID: 6425166523707026062, guid: df75d0d9a61401287a54ef034eafee1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -662,16 +644,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8890466826200463743, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: RotationSpeed.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8890466826200463743, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: RotationSpeed.y
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8963541532241025456, guid: df75d0d9a61401287a54ef034eafee1b,
         type: 3}
       propertyPath: m_Name
@@ -680,11 +652,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2504085922684214035, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 987463500}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df75d0d9a61401287a54ef034eafee1b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

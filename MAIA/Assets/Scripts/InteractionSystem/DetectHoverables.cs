@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using Unity.Properties;
-using UnityEditor.MPE;
 using UnityEngine;
 
 public class DetectHoverables : MonoBehaviour
@@ -25,6 +20,7 @@ public class DetectHoverables : MonoBehaviour
             queryTriggerInteraction: QueryTriggerInteraction.Ignore,
             hitInfo: out RaycastHit hitInfo);
         
+        // Exit hoverables hovering nothing 
         if (!hasHit) {
             _hoverableComponent?.OnHoverExit();
             _hoverableComponent = null;
@@ -32,6 +28,7 @@ public class DetectHoverables : MonoBehaviour
             return;
         }
 
+        // If something was hit and it is a hoverable, remember the hoverable
         if (hitInfo.collider.gameObject.TryGetComponent(out IHoverable newHoverable)) { 
             if (_hoverableComponent == newHoverable) return;
         
@@ -42,6 +39,7 @@ public class DetectHoverables : MonoBehaviour
             return;
         }
 
+        // Exit the last hoverable if hovering non hoverable
         _hoverableComponent?.OnHoverExit();
         _hoverableComponent = null;
         HoveringObject = null;

@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.Animations;
 
 // "CC" stands for "CharacterController"
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(RotationConstraint)), RequireComponent(typeof(CharacterController))]
 public class CCInput : MonoBehaviour
 {
+    [Header("The rotation constraint is automatically retrieved :)")]
     private CharacterController _characterController;
     public float DecelerationSpeed = 5f;
     public float AccelerationSpeed = 5f;
@@ -13,13 +15,18 @@ public class CCInput : MonoBehaviour
 
     private void Start()
     {
+        var s = new ConstraintSource();
+        s.sourceTransform = Camera.main.transform;
+        s.weight = 1f;
+        GetComponent<RotationConstraint>().AddSource(s);
+
         _characterController = GetComponent<CharacterController>();
         // This prevents the controller from accelerating if too high
         _characterController.minMoveDistance = 0f;
     }
 
     private void Update() {
-        Debug.DrawRay(transform.position, InputVector() * MaxVelocity, Color.magenta);
+        Debug.DrawRay(transform.position, transform.TransformDirection(InputVector() * MaxVelocity), Color.magenta);
         Debug.DrawRay(transform.position, Celerate(_characterController.velocity, transform.TransformDirection(InputVector())), Color.green);
 
         _characterController.Move(
