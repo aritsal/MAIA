@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu()]
-public class Item : ScriptableObject
+[CreateAssetMenu(fileName = "New Item", menuName = "Scriptable Objects/Item", order = 0)]
+public class Item : ObjectPool
 {
-    [field: SerializeReference] public GameObject prefab;
+    
 }

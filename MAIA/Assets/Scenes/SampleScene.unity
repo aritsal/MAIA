@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 1572485575}
   - component: {fileID: 1572485574}
   - component: {fileID: 1572485573}
-  - component: {fileID: 1572485577}
+  - component: {fileID: 1572485578}
   m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
@@ -673,18 +673,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1572485577
-MonoBehaviour:
+--- !u!1818360608 &1572485578
+PositionConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572485572}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e0e4b231f0871f5fa8d9adac87d0571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 4.15, y: 0, z: 6.36}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_Active: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1001 &2207881023922835760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,21 +767,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1477103720602613349, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_Lens.FieldOfView
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971466816204263543, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071192699643582491, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_Sources.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6425166523707026062, guid: df75d0d9a61401287a54ef034eafee1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -825,46 +816,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_VerticalAxis.m_MaxSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_VerticalAxis.m_AccelTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_VerticalAxis.m_DecelTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_VerticalAxis.m_SpeedMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_HorizontalAxis.m_MaxSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_HorizontalAxis.m_AccelTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_HorizontalAxis.m_DecelTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7594251251603389194, guid: df75d0d9a61401287a54ef034eafee1b,
-        type: 3}
-      propertyPath: m_HorizontalAxis.m_SpeedMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8963541532241025456, guid: df75d0d9a61401287a54ef034eafee1b,
         type: 3}
