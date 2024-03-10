@@ -1,0 +1,24 @@
+[*.cs]
+
+dotnet_style_predefined_type_for_locals_parameters_members = true
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+[*.{cs,vb}]
+
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_event = true
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_method = true
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_property = true
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_field = true
+
+# IDE0009: Member access should be qualified.
+dotnet_diagnostic.IDE0009.severity = suggestion

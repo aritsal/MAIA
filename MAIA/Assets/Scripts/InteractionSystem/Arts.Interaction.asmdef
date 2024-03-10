@@ -1,7 +1,9 @@
 {
     "name": "Arts.Interaction",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:bd176194795a3f92ea55ffd2555d6868"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
