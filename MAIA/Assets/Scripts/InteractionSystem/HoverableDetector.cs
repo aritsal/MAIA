@@ -13,9 +13,10 @@ public class HoverableDetector : MonoBehaviour
 
     private void Start() {
         // Lazy var names .. change .. sometime later
-        ConstraintSource s = new ConstraintSource();
-        s.weight = 1f;
-        s.sourceTransform = Camera.main.transform;
+        ConstraintSource s = new ConstraintSource {
+            weight = 1f,
+            sourceTransform = Camera.main.transform
+        };
         RotationConstraint c = this.GetComponent<RotationConstraint>();
         c.AddSource(s);
         c.constraintActive = true;

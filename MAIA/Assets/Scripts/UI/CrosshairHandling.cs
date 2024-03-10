@@ -9,28 +9,28 @@ public class CrosshairHandling : MonoBehaviour
 
     private void Start()
     {
-        _image = GetComponent<Image>();   
+        this._image = this.GetComponent<Image>();   
     }
 
     private void OnEnable() {
-        GameplayModeHandling.OnEnterFirstPersonMode += OnEnterFirstPersonMode;
-        GameplayModeHandling.OnExitFirstPersonMode += OnExitFirstPersonMode;
+        GameplayModeHandling.onEnterFirstPersonMode += this.OnEnterFirstPersonMode;
+        GameplayModeHandling.onExitFirstPersonMode += this.OnExitFirstPersonMode;
     }
 
     private void OnDisable() {
-        GameplayModeHandling.OnEnterFirstPersonMode -= OnEnterFirstPersonMode;
-        GameplayModeHandling.OnExitFirstPersonMode -= OnExitFirstPersonMode;
+        GameplayModeHandling.onEnterFirstPersonMode -= this.OnEnterFirstPersonMode;
+        GameplayModeHandling.onExitFirstPersonMode -= this.OnExitFirstPersonMode;
     }
 
 
 
     private void OnEnterFirstPersonMode() {
-        _image.enabled = true;
+        this._image.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnExitFirstPersonMode() {
-        _image.enabled = false;
+        this._image.enabled = false;
         Cursor.lockState = CursorLockMode.None;
     }
 

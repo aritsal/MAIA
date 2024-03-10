@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ItemRef : MonoBehaviour
 {
-    [field: SerializeReference] public Item Item;
+    [field: SerializeReference] public Item item;
 }

@@ -3,13 +3,13 @@ using UnityEngine;
 [DefaultExecutionOrder(1000)]
 public class GameplayModeHandling : MonoBehaviour
 {
-    public static Action OnEnterFirstPersonMode;
-    public static Action OnExitFirstPersonMode;
+    public static Action onEnterFirstPersonMode;
+    public static Action onExitFirstPersonMode;
 
-    public static Action OnEnterUiMode;
-    public static Action OnExitUiMode;
+    public static Action onEnterUiMode;
+    public static Action onExitUiMode;
 
     private void Start() {
-        OnEnterFirstPersonMode?.Invoke();
+        onEnterFirstPersonMode?.Invoke();
     }
 }
