@@ -26,8 +26,15 @@ public class CCInput : MonoBehaviour
     }
 
     private void Update() {
-        Debug.DrawRay(this.transform.position, this.transform.TransformDirection(this.InputVector() * this.maxVelocity), Color.magenta);
-        Debug.DrawRay(this.transform.position, this.Celerate(this._characterController.velocity, this.transform.TransformDirection(this.InputVector())), Color.green);
+        Debug.DrawRay(
+            this.transform.position, 
+            this.transform.TransformDirection(this.InputVector() * this.maxVelocity), 
+            Color.magenta);
+        Debug.DrawRay(
+            this.transform.position, 
+            this.Celerate(this._characterController.velocity, 
+            this.transform.TransformDirection(this.InputVector())), 
+            Color.green);
 
         this._characterController.Move(
             this.Gravity(
