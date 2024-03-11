@@ -2,7 +2,8 @@
     "name": "Arts.UI",
     "rootNamespace": "",
     "references": [
-        "GUID:b0776627842aa2d899de34a086dc0d63"
+        "GUID:b0776627842aa2d899de34a086dc0d63",
+        "GUID:efaf55312f6f679028c6f4bdd0cdd477"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
