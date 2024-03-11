@@ -10,5 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0f93a734188718ca90206e62eeb850f, type: 3}
-  m_Name: Hamburger
+  m_Name: Cabbage_Item
   m_EditorClassIdentifier: 
+  _prefab: {fileID: 6294326902294288988, guid: d9ed6296607be6510b0e2bb9d3322c34, type: 3}

@@ -9,7 +9,7 @@ public class HoverableDetector : MonoBehaviour
     [field: SerializeField] private LayerMask _hoverableLayers;
     [field: SerializeField] private float _maxHoverableDistance = 5f;
     public IHoverable hoverable { get; private set; }
-
+    public bool isHovering => this.hoverable != null;
 
     private void Start() {
         // Lazy var names .. change .. sometime later
@@ -22,10 +22,6 @@ public class HoverableDetector : MonoBehaviour
         c.constraintActive = true;
     }
 
-    private void OnDisable() {
-        
-    }
-
     private void Update()
     {
         Debug.DrawRay(this.transform.position, this.transform.forward);
@@ -36,14 +32,14 @@ public class HoverableDetector : MonoBehaviour
             queryTriggerInteraction: QueryTriggerInteraction.Ignore,
             hitInfo: out RaycastHit hitInfo);
         
-        // Exit hoverables hovering nothing 
+        // Exit hoverables when hovering over nothing 
         if (!hasHit) {
             this.hoverable?.OnHoverExit(this);
             this.hoverable = null;
             return;
         }
 
-        // If something was hit and it is a hoverable, remember the hoverable
+        // Remember the hoverable if it has a hoverable component
         if (hitInfo.collider.gameObject.TryGetComponent(out IHoverable newHoverable)) { 
             if (this.hoverable == newHoverable) return;
 
