@@ -1,15 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ItemRef : MonoBehaviour, IHoverable
+[RequireComponent(typeof (Hoverable))]
+public class ItemRef : MonoBehaviour
 {
     [field: SerializeReference] public Item item;
-    public UnityEvent OnHold;
-    public UnityEvent OnDrop;
-
-    public void OnHoverEnter(HoverableDetector hoverableDetector) {}
-
-    public void OnHoverExit(HoverableDetector hoverableDetector) {}
+    public Action OnHold;
+    public Action OnDrop;
 }

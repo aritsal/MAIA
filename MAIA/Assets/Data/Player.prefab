@@ -155,9 +155,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3971466816204263543}
-  - component: {fileID: 3320543495678499409}
   - component: {fileID: 1477103720602613349}
   - component: {fileID: 4647904998367631013}
+  - component: {fileID: 3320543495678499409}
+  - component: {fileID: 8546589674394939109}
+  - component: {fileID: 4469076767440014103}
+  - component: {fileID: 2449339754891955101}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -182,22 +185,6 @@ Transform:
   - {fileID: 2675202688451892236}
   m_Father: {fileID: 6425166523707026062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3320543495678499409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2504085922684214035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70aa99f9763941ccfb8f1136a4363b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hoverableLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  _maxHoverableDistance: 5
 --- !u!114 &1477103720602613349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +242,63 @@ RotationConstraint:
   m_Active: 1
   m_IsLocked: 1
   m_Sources: []
+--- !u!114 &3320543495678499409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504085922684214035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70aa99f9763941ccfb8f1136a4363b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hoverableLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  _maxHoverableDistance: 5
+--- !u!114 &8546589674394939109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504085922684214035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fe536d094f1858bbc184f880bd58b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <handSlot>k__BackingField: {fileID: 1102913571707531337}
+  _hoverableDetector: {fileID: 3320543495678499409}
+  <interactKey>k__BackingField: 0
+--- !u!114 &4469076767440014103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504085922684214035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35523c4628c94d5808f9f82f91620de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2449339754891955101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504085922684214035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac8c8cecb93b3ebd98045dbc00e568f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handSlot: {fileID: 1102913571707531337}
+  _hoverableDetector: {fileID: 3320543495678499409}
 --- !u!1 &7115354011898969373
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +430,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2675202688451892236}
   - component: {fileID: 1102913571707531337}
-  - component: {fileID: 2807363229613776339}
   m_Layer: 0
   m_Name: HandSlot
   m_TagString: Untagged
@@ -421,20 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec917f96b0ce79a4943eec54b62cbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2807363229613776339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8069381404641226941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8c8cecb93b3ebd98045dbc00e568f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _handSlot: {fileID: 1102913571707531337}
-  _hoverableDetector: {fileID: 3320543495678499409}
 --- !u!1 &8963541532241025456
 GameObject:
   m_ObjectHideFlags: 0

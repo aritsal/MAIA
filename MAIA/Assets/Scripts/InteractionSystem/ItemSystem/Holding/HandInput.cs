@@ -8,8 +8,6 @@ public class HandInput : MonoBehaviour
     [SerializeField] private HoverableDetector _hoverableDetector;
 
     private void Update() {
-        if (this._hoverableDetector.isHovering)
-            Debug.Log("hovering");
         if (this._handSlot.isEmpty) this.TryGrab();
         else this.TryDrop();
     }
@@ -17,8 +15,7 @@ public class HandInput : MonoBehaviour
     private void TryGrab() {
         if (!Input.GetMouseButtonUp(0)) return;
         if (!this._hoverableDetector.isHovering) return;
-        if (!this._hoverableDetector.hoverable.gameObject.TryGetComponent(out ItemRef itemRef)) return;
-
+        if (!this._hoverableDetector.hoverable.TryGetComponent(out ItemRef itemRef)) return;
         this._handSlot.EquipItem(itemRef);
     }
 

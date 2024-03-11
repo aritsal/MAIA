@@ -17,22 +17,22 @@ public class ToggleRigidbodyOnHold : MonoBehaviour
     }
 
     private void OnEnable() {
-        this._itemRef.OnHold.AddListener(this.OnHold);
-        this._itemRef.OnDrop.AddListener(this.OnDrop);
+        this._itemRef.OnHold += this.OnHold;
+        this._itemRef.OnDrop += this.OnDrop;
     }
 
     private void OnDisable() {
-        this._itemRef.OnHold.RemoveListener(this.OnHold);
-        this._itemRef.OnDrop.RemoveListener(this.OnDrop);
+        this._itemRef.OnHold -= this.OnHold;
+        this._itemRef.OnDrop -= this.OnDrop;
     }
 
     private void OnHold() {
-        _rigidbody.isKinematic = true;
-        _collider.enabled = false;
+        this._rigidbody.isKinematic = true;
+        this._collider.enabled = false;
     }
 
     private void OnDrop() {
-        _rigidbody.isKinematic = false;
-        _collider.enabled = true;
+        this._rigidbody.isKinematic = false;
+        this._collider.enabled = true;
     }
 }

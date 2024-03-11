@@ -1,29 +1,17 @@
-using UnityEditor.Graphs;
 using UnityEngine;
-using UnityEngine.Animations;
 
-[RequireComponent(typeof(RotationConstraint))]
 public class HoverableDetector : MonoBehaviour
 {
-    [field: Header("RotationConstraint is automatically handled by this script :)")]
     [field: SerializeField] private LayerMask _hoverableLayers;
     [field: SerializeField] private float _maxHoverableDistance = 5f;
-    public IHoverable hoverable { get; private set; }
+    public Hoverable hoverable { get; private set; }
     public bool isHovering => this.hoverable != null;
 
-    private void Start() {
-        // Lazy var names .. change .. sometime later
-        ConstraintSource s = new ConstraintSource {
-            weight = 1f,
-            sourceTransform = Camera.main.transform
-        };
-        RotationConstraint c = this.GetComponent<RotationConstraint>();
-        c.AddSource(s);
-        c.constraintActive = true;
+    private void Update() {
+        this.CheckForHoverables();
     }
 
-    private void Update()
-    {
+    private void CheckForHoverables() {
         Debug.DrawRay(this.transform.position, this.transform.forward);
         bool hasHit = Physics.Raycast(
             ray: new Ray(this.transform.position, this.transform.forward),
@@ -31,26 +19,30 @@ public class HoverableDetector : MonoBehaviour
             layerMask: this._hoverableLayers,
             queryTriggerInteraction: QueryTriggerInteraction.Ignore,
             hitInfo: out RaycastHit hitInfo);
+
+        // No hit, no hoverable 
+        if (!hasHit) 
+            this.SetHoverable(null); 
+
+        // Only use the hoverable if it has the Hoverable component
+        else if (hitInfo.collider.TryGetComponent(out Hoverable newHoverable)) 
+            this.SetHoverable(newHoverable);
         
-        // Exit hoverables when hovering over nothing 
-        if (!hasHit) {
-            this.hoverable?.OnHoverExit(this);
-            this.hoverable = null;
-            return;
-        }
+        // No component, no hoverable
+        else
+            this.SetHoverable(null);
+    }
 
-        // Remember the hoverable if it has a hoverable component
-        if (hitInfo.collider.gameObject.TryGetComponent(out IHoverable newHoverable)) { 
-            if (this.hoverable == newHoverable) return;
+    private void SetHoverable(Hoverable newHoverable)  {
+        // Do nothing if reference is the same
+        if (this.hoverable == newHoverable) return;
 
-            this.hoverable?.OnHoverExit(this);
-            newHoverable.OnHoverEnter(this);
-            this.hoverable = newHoverable;
-            return;
-        }
-
-        // Exit the last hoverable if hovering non hoverable
-        this.hoverable?.OnHoverExit(this);
-        this.hoverable = null;
+        // Only call enter / exit actions if non-null
+        if (this.hoverable != null) 
+            this.hoverable.OnHoverExit?.Invoke(this);
+        if (newHoverable != null)
+            newHoverable.OnHoverEnter?.Invoke(this);
+        
+        this.hoverable = newHoverable;
     }
 }
