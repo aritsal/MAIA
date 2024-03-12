@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class HandSlot : MonoBehaviour
 {
     public ItemRef currentItem { get; private set; }
 
-    public bool isEmpty => currentItem == null;
+    public bool isEmpty => this.currentItem == null;
 
     /// <summary>
     /// Destroys the current item, if holding one
@@ -27,14 +24,16 @@ public class HandSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// Drops the current item, if holding one
+    /// Drops the current item, if holding one, and returns it
     /// </summary>
-    public void DropItem() {
-        if (this.currentItem == null) return;
+    public ItemRef DropItem() {
+        if (this.currentItem == null) return null;
 
         this.currentItem.transform.SetParent(null, true);
         this.currentItem.OnDrop?.Invoke();
+        ItemRef item = this.currentItem;
         this.currentItem = null;
+        return item;
     }
 
     /// <summary>

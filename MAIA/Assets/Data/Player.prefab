@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4469076767440014103}
   - component: {fileID: 2449339754891955101}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: POV
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <handSlot>k__BackingField: {fileID: 1102913571707531337}
   _hoverableDetector: {fileID: 3320543495678499409}
-  <interactKey>k__BackingField: 0
+  <interactKey>k__BackingField: 101
 --- !u!114 &4469076767440014103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6425166523707026062}
   - component: {fileID: 5371367490557212934}
+  - component: {fileID: 7313161038196963863}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -510,3 +511,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df1a565702a09ece9ea855eff9bb8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7313161038196963863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963541532241025456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa9c5af3ac087215b8a32c424952189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemProcessors:
+  - {fileID: 11400000, guid: e3fcf2a308c776e92ab8254fa3e69c7f, type: 2}

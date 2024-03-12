@@ -9,11 +9,20 @@ public class InteractionHandler : MonoBehaviour
     [field: SerializeField] public KeyCode interactKey { get; private set; }
 
     private void Update() {
-        this.TryInteract();
+        this.TryInteractDown();
+        this.TryInteractUp();
     }
 
-    private void TryInteract() {
+    private void TryInteractUp() {
         if (!Input.GetKeyUp(this.interactKey)) return;
+        if (!this._hoverableDetector.isHovering) return;
+        if (!this._hoverableDetector.hoverable.TryGetComponent(out Interactable interactable)) return;
+
+        interactable.OnInteractKeyUp?.Invoke(this);
+    }
+
+    private void TryInteractDown() {
+        if (!Input.GetKeyDown(this.interactKey)) return;
         if (!this._hoverableDetector.isHovering) return;
         if (!this._hoverableDetector.hoverable.TryGetComponent(out Interactable interactable)) return;
 

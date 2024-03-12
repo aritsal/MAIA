@@ -18,7 +18,7 @@ public class HoverableDetector : MonoBehaviour
             ray: new Ray(this.transform.position, this.transform.forward),
             maxDistance: this._maxHoverableDistance,
             layerMask: this._hoverableLayers,
-            queryTriggerInteraction: QueryTriggerInteraction.Ignore,
+            queryTriggerInteraction: QueryTriggerInteraction.Collide,
             hitInfo: out RaycastHit hitInfo);
 
         // No hit, no hoverable 
@@ -42,15 +42,15 @@ public class HoverableDetector : MonoBehaviour
         // If the new hoverable is disabled, we use a null reference instread of 
         // the actual reference. Additionally, we don't enter the newHoverable
         if (newHoverable != null && !newHoverable.enabled) {
-            this.hoverable.OnHoverExit?.Invoke(this);
+            this.hoverable.onHoverExit?.Invoke(this);
             this.hoverable = null;
         }
 
         // Only call enter / exit actions if non-null
         if (this.hoverable != null) 
-            this.hoverable.OnHoverExit?.Invoke(this);
+            this.hoverable.onHoverExit?.Invoke(this);
         if (newHoverable != null)
-            newHoverable.OnHoverEnter?.Invoke(this);
+            newHoverable.onHoverEnter?.Invoke(this);
         
         this.hoverable = newHoverable;
     }
@@ -62,7 +62,7 @@ public class HoverableDetector : MonoBehaviour
         if (this.hoverable.enabled) return;
 
         // Exit the hoverable if it has been disabled
-        this.hoverable.OnHoverExit?.Invoke(this);
+        this.hoverable.onHoverExit?.Invoke(this);
 
         this.hoverable = null;
     }

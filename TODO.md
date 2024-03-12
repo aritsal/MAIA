@@ -1,7 +1,12 @@
 # DO IN THIS 
 
-
 * Implement Cooking System
-* Implement Dialogue System + UI
+
+
+
+* Create kitchen
+* Create basic UI
+* Implement Roaches
+
 
 

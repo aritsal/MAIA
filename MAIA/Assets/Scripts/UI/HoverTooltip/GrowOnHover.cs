@@ -19,13 +19,13 @@ public class GrowOnHover : MonoBehaviour
     }
 
     private void OnEnable() {
-        this._hoverable.OnHoverEnter += this.OnHoverEnter;
-        this._hoverable.OnHoverExit += this.OnHoverExit;
+        this._hoverable.onHoverEnter += this.OnHoverEnter;
+        this._hoverable.onHoverExit += this.OnHoverExit;
     }
 
     private void OnDisable() {
-        this._hoverable.OnHoverEnter -= this.OnHoverEnter;
-        this._hoverable.OnHoverExit -= this.OnHoverExit;
+        this._hoverable.onHoverEnter -= this.OnHoverEnter;
+        this._hoverable.onHoverExit -= this.OnHoverExit;
         this._target.localScale = Vector3.zero;
     }
 
