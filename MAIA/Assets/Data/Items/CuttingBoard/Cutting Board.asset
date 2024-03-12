@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f93a734188718ca90206e62eeb850f, type: 3}
   m_Name: Cutting Board
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 6772180760733850432, guid: ba58e914a81602847b0833a032e65b20, type: 3}

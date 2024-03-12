@@ -18,6 +18,11 @@ MonoBehaviour:
     <output>k__BackingField: {fileID: 11400000, guid: 6a6a0f822d36061e7bebdfa38817b196,
       type: 2}
     <duration>k__BackingField: 8
+  - <input>k__BackingField: {fileID: 11400000, guid: 1d60ebf7ea6f562dbb41f75610979547,
+      type: 2}
+    <output>k__BackingField: {fileID: 11400000, guid: 126ea5cc46cd18674b07daca506557b7,
+      type: 2}
+    <duration>k__BackingField: 8
   <defaultProcess>k__BackingField:
     <input>k__BackingField: {fileID: 0}
     <output>k__BackingField: {fileID: 11400000, guid: da5a62c224e25b1f6bb084cc692121c9,

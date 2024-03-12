@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f93a734188718ca90206e62eeb850f, type: 3}
   m_Name: Raw Steak
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 7646473785219460520, guid: 79819650abc11ffde906cf824b0b128f, type: 3}

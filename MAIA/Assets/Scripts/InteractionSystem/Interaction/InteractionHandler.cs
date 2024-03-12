@@ -18,7 +18,7 @@ public class InteractionHandler : MonoBehaviour
         if (!this._hoverableDetector.isHovering) return;
         if (!this._hoverableDetector.hoverable.TryGetComponent(out Interactable interactable)) return;
 
-        interactable.OnInteractKeyUp?.Invoke(this);
+        interactable.onInteractKeyUp?.Invoke(this);
     }
 
     private void TryInteractDown() {
@@ -26,6 +26,6 @@ public class InteractionHandler : MonoBehaviour
         if (!this._hoverableDetector.isHovering) return;
         if (!this._hoverableDetector.hoverable.TryGetComponent(out Interactable interactable)) return;
 
-        interactable.OnInteractKeyUp?.Invoke(this);
+        interactable.onInteractKeyUp?.Invoke(this);
     }
 }

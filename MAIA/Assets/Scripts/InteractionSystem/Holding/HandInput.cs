@@ -37,5 +37,6 @@ public class HandInput : MonoBehaviour
 
         if (!itemRef.TryGetComponent(out Rigidbody rb)) return;
         rb.AddForce(this.transform.forward * this.throwVelocity + Vector3.up * this.additionalUpwardsThrowVelocity, ForceMode.VelocityChange);
+        rb.AddForceAtPosition(itemRef.transform.forward, itemRef.transform.position + itemRef.transform.up, ForceMode.VelocityChange);
     }
 }

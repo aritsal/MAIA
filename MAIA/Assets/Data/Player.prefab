@@ -299,6 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handSlot: {fileID: 1102913571707531337}
   _hoverableDetector: {fileID: 3320543495678499409}
+  throwVelocity: 6
+  additionalUpwardsThrowVelocity: 2
 --- !u!1 &7115354011898969373
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,3 +527,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemProcessors:
   - {fileID: 11400000, guid: e3fcf2a308c776e92ab8254fa3e69c7f, type: 2}
+  - {fileID: 11400000, guid: 6bb6c0660438862ecb49e642dd9e689b, type: 2}

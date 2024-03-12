@@ -7,6 +7,6 @@ using UnityEngine;
 public class TestInteractable : MonoBehaviour 
 {
     private void Start() {
-        this.GetComponent<Interactable>().OnInteractKeyUp += (_) => Debug.Log("Interact"); 
+        this.GetComponent<Interactable>().onInteractKeyUp += (_) => Debug.Log("Interact"); 
     }
 }

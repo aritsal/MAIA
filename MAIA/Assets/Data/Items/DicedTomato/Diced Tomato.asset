@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f93a734188718ca90206e62eeb850f, type: 3}
   m_Name: Diced Tomato
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 4666122866251078002, guid: 4d189e0e93a254b3fbc5257dbbec382a, type: 3}

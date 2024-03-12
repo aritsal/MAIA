@@ -720,7 +720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5588fab2da48a880081e899437d1f7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHoverableDetector: {fileID: 0}
 --- !u!114 &7387977289821031742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b9c768dea7318bf9fc37dbd491f72f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fcbc20772e489e8bab3f37208a71b602, type: 2}
+  item: {fileID: 11400000, guid: da5a62c224e25b1f6bb084cc692121c9, type: 2}
 --- !u!114 &1901269429906399610
 MonoBehaviour:
   m_ObjectHideFlags: 0

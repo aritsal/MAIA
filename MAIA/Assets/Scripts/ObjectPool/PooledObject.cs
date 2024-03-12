@@ -17,8 +17,11 @@ public class PooledObject : MonoBehaviour
     }
 
     public void Release() {
-        this._pool.Push(this);
-        _active.Remove(this);
-        this.gameObject.SetActive(false);
+        // with how my code is, pooled objects would just cause more of a headache
+        GameObject.Destroy(this.gameObject);
+
+        // this._pool.Push(this);
+        // _active.Remove(this);
+        // this.gameObject.SetActive(false);
     }
 }

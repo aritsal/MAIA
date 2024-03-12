@@ -6,7 +6,7 @@ public class Hoverable : MonoBehaviour
     public const string HOVERABLE_LAYER_NAME = "Hoverable";
 
     public bool isBeingHovered => this.currentHoverableDetector != null;
-    public HoverableDetector currentHoverableDetector;
+    public HoverableDetector currentHoverableDetector { get; private set; }
     public Action<HoverableDetector> onHoverEnter;
     public Action<HoverableDetector> onHoverExit;
     private void Awake() {

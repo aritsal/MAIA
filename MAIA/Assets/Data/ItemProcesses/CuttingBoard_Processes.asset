@@ -28,8 +28,23 @@ MonoBehaviour:
     <output>k__BackingField: {fileID: 11400000, guid: e7c94d19782aa8ceeab1e25296f0971f,
       type: 2}
     <duration>k__BackingField: 6
+  - <input>k__BackingField: {fileID: 11400000, guid: 126ea5cc46cd18674b07daca506557b7,
+      type: 2}
+    <output>k__BackingField: {fileID: 11400000, guid: 6a6a0f822d36061e7bebdfa38817b196,
+      type: 2}
+    <duration>k__BackingField: 6
+  - <input>k__BackingField: {fileID: 11400000, guid: d80e86b3597f12bca89ef417fa1e407b,
+      type: 2}
+    <output>k__BackingField: {fileID: 11400000, guid: bcac2976e06977979bd86f24b43ba665,
+      type: 2}
+    <duration>k__BackingField: 6
+  - <input>k__BackingField: {fileID: 11400000, guid: f32534494d03b5f75abbfd6e31130d7f,
+      type: 2}
+    <output>k__BackingField: {fileID: 11400000, guid: 3dc0e03a2293787ac8b7a40a9c930c65,
+      type: 2}
+    <duration>k__BackingField: 60
   <defaultProcess>k__BackingField:
     <input>k__BackingField: {fileID: 0}
     <output>k__BackingField: {fileID: 11400000, guid: 3dc0e03a2293787ac8b7a40a9c930c65,
       type: 2}
-    <duration>k__BackingField: 8
+    <duration>k__BackingField: 10

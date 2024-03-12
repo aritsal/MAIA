@@ -16,11 +16,11 @@ public class StaticSlot : MonoBehaviour
     }
 
     private void OnEnable() {
-        this.GetComponent<Interactable>().OnInteractKeyUp += this.TryPlaceItem;
+        this.GetComponent<Interactable>().onInteractKeyUp += this.TryPlaceItem;
     }
 
     private void OnDisable() {
-        this.GetComponent<Interactable>().OnInteractKeyUp -= this.TryPlaceItem;
+        this.GetComponent<Interactable>().onInteractKeyUp -= this.TryPlaceItem;
     }
 
     public void ForceDropItem() {
