@@ -9,6 +9,7 @@ public class HoverableDetector : MonoBehaviour
 
     private void Update() {
         this.CheckForHoverables();
+        this.EnabledHoverableCheck();
     }
 
     private void CheckForHoverables() {
@@ -23,9 +24,9 @@ public class HoverableDetector : MonoBehaviour
         // No hit, no hoverable 
         if (!hasHit) 
             this.SetHoverable(null); 
-
+        
         // Only use the hoverable if it has the Hoverable component
-        else if (hitInfo.collider.TryGetComponent(out Hoverable newHoverable)) 
+        else if (hitInfo.collider.TryGetComponent(out Hoverable newHoverable))
             this.SetHoverable(newHoverable);
         
         // No component, no hoverable
@@ -37,6 +38,14 @@ public class HoverableDetector : MonoBehaviour
         // Do nothing if reference is the same
         if (this.hoverable == newHoverable) return;
 
+        
+        // If the new hoverable is disabled, we use a null reference instread of 
+        // the actual reference. Additionally, we don't enter the newHoverable
+        if (newHoverable != null && !newHoverable.enabled) {
+            this.hoverable.OnHoverExit?.Invoke(this);
+            this.hoverable = null;
+        }
+
         // Only call enter / exit actions if non-null
         if (this.hoverable != null) 
             this.hoverable.OnHoverExit?.Invoke(this);
@@ -44,5 +53,17 @@ public class HoverableDetector : MonoBehaviour
             newHoverable.OnHoverEnter?.Invoke(this);
         
         this.hoverable = newHoverable;
+    }
+
+    private void EnabledHoverableCheck() {
+        if (this.hoverable == null) return;
+
+        // We are A-OK
+        if (this.hoverable.enabled) return;
+
+        // Exit the hoverable if it has been disabled
+        this.hoverable.OnHoverExit?.Invoke(this);
+
+        this.hoverable = null;
     }
 }

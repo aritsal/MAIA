@@ -20,26 +20,41 @@ Five can
 
 all ingredients come from the fridge
 
+# Ingredients 
+    - Tomatoes
+    - Lettuce
+    - "Ranch"
+    - Raw Steak
+    - Cheese
+
+The following are secondary ingredients
+   
+    - Dice Tomatoes
+    - Dice lettuce
+    - Cooked Steak
+    
+The following are containers for recipies, they also double as items
+    
+    - Buns
+    - Taco Shell
+
 ## Salad
     - Dice Tomatoes
-    - Add tomatoes to bowl
     - Dice lettuce
-    - Add lettuce to bowl
+    - Add tomatoes to bowl
     - Add "ranch" to bowl
 
-## Taco
-    - Grill groud beef
-    - Add ground beef to Taco Shell
-    - Add lettuce
-    - Add cheese to Taco Shell
+## Taco - Taco Shell
+    - Cooked Steak 
+    - Diced lettuce
+    - Cheese
 
-## Burger
-    - Grill groud beef
-    - Add groud beef to Bun
-    - Add Lettuce to Bun
-    - Add Tomatoes to Bun
-    - Add Cheese to Bun
-    - Add "Ranch" to Bun
+## Burger - Buns
+    - Cooked Steak 
+    - Diced Lettuce 
+    - Tomatoes 
+    - Cheese 
+    - "Ranch" 
 
 
 # Creatures
